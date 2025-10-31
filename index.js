@@ -5,5 +5,6 @@ const app = express();
 
 app.use("/user", userRouter);
 app.use("/course", courseRouter);
+app.use("/admin", adminRouter);
 
 app.listen(3000);
