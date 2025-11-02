@@ -2,6 +2,8 @@ const { Router } = require("express");
 
 const adminRouter = Router();
 
+const { adminModel } = require("../db");
+
 adminRouter.post("/signup", function (req, res) {
   res.json({
     message: "signup endpoint",
@@ -32,6 +34,6 @@ adminRouter.get("/course", function (req, res) {
   });
 });
 
-module.export = {
+module.exports = {
   adminRouter: adminRouter,
 };
