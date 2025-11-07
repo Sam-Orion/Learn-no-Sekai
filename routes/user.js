@@ -55,15 +55,15 @@ userRouter.post("/signin", async function (req, res) {
   }
 });
 
-userRouter.get("/purchase", function (req, res) {
+userRouter.get("/purchase", async function (req, res) {
   const userId = req.userId;
 
   const purchases = await purchaseModel.find({
     userId,
-  })
+  });
 
   res.json({
-    purchases
+    purchases,
   });
 });
 
