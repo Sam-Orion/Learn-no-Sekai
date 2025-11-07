@@ -2,7 +2,7 @@ const express = require("express");
 const { userModel, courseModel } = require("../db");
 const { Router } = express;
 const { purchaseModel } = require("../db");
-const { userMiddleware } = require("../middleware");
+const { userMiddleware } = require("../middleware/user");
 
 const courseRouter = Router();
 
